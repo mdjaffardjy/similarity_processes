@@ -1,0 +1,8 @@
+Bugs et problèmes :
+- revoir groupes (pourquoi parfois groupes vides ?)
+- revoir groupes : pourquoi si peu de groupes ? pourquoi un si rempli leve,shtein 0.85 ?
+- revoir groupes : différence entre utilisation dans x wf et utilisation x fois (en tout)
+
+à faire :
+- calculer groupes levenshtein workflow -- si il y en a plusieurs 
+- refaire df avec groupes uniques
