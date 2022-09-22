@@ -39,7 +39,7 @@ with open("/home/marinedjaffardjy/Documents/Code/Similarite_process/json/nf_proc
 ################    
     
 #compute levenshtein for snakemake
-def levenshtein_proc(rules, resume=0, output_file = "/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein/levenshtein_tool_snk", outputfile_resume = "/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein_tools_snk_587.json"):
+def levenshtein_proc(rules, resume=0, output_file = "/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein/levenshtein_tool_snk"):
     #input : 
     #    list of snakemake rules in form of a json
     #    resume : int at which the computation will be restarted
@@ -77,15 +77,20 @@ def levenshtein_proc(rules, resume=0, output_file = "/home/marinedjaffardjy/Docu
 
 
 #### launch script
-    
+ 
+snk_proc_path = "/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein_snk/levenshtein_snk_tools"   
 nf_proc_path = "/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein_nf_tools/levenshtein_nf_tools"
 nf_all_path = "/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein_nf/levenshtein_nf_no_tools"
 snk_all_path = "/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein_snk/levenshtein_snk_no_tools"
 
+#nf tools proc
+
+snk_scores = levenshtein_proc(snk_tools,500,snk_proc_path)
+
 
 #nf tools proc
 
-nf_scores = levenshtein_proc(nf_rules_tools,3850,nf_proc_path,outputfile_resume="/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein_nf_tools/levenshtein_nf_tools_3800.json")
+#nf_scores = levenshtein_proc(nf_rules_tools,3850,nf_proc_path,outputfile_resume="/home/marinedjaffardjy/Documents/Code/Similarite_process/json/levenshtein_nf_tools/levenshtein_nf_tools_3800.json")
 
 #snk_no_tools_scores = levenshtein_proc(snk_rules_no_tools,0,snk_all_path)
 
